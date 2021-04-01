@@ -33,7 +33,7 @@ var getCityWeather = function (searchCityName) {
         $("#currentdate").html(date);
         // display weather icon
         var weatherIncoUrl =
-          "http://openweathermap.org/img/wn/" +
+          "https://openweathermap.org/img/wn/" +
           response.weather[0].icon +
           "@2x.png";
         $("#weatherIconToday").attr("src", weatherIncoUrl);
@@ -104,7 +104,7 @@ var getForecast = function (lat, lon) {
         $("#Date" + i).html(date);
         // display weather icon
         var weatherIncoUrl =
-          "http://openweathermap.org/img/wn/" +
+          "https://openweathermap.org/img/wn/" +
           response.daily[i].weather[0].icon +
           "@2x.png";
         $("#weatherIconDay" + i).attr("src", weatherIncoUrl);

@@ -4,10 +4,10 @@ var numOfCities = 9;
 var apiKey = "appid=9bd0603a04cb662f60d9ff018ae27e92";
 var unit = "units=imperial";
 var dailyWeatherApiStarts =
-  "https://api.openweathermap.org/data/2.5/weather?q=";
-var dailyUVIndexApiStarts = "https://api.openweathermap.org/data/2.5/uvi?";
+  "http://api.openweathermap.org/data/2.5/weather?q=";
+var dailyUVIndexApiStarts = "http://api.openweathermap.org/data/2.5/uvi?";
 var forecastWeatherApiStarts =
-  "https://api.openweathermap.org/data/2.5/onecall?";
+  "http://api.openweathermap.org/data/2.5/onecall?";
 // select from html element
 var searchCityForm = $("#searchCityForm");
 var searchedCities = $("#searchedCityLi");
@@ -33,7 +33,7 @@ var getCityWeather = function (searchCityName) {
         $("#currentdate").html(date);
         // display weather icon
         var weatherIncoUrl =
-          "https://openweathermap.org/img/wn/" +
+          "http://openweathermap.org/img/wn/" +
           response.weather[0].icon +
           "@2x.png";
         $("#weatherIconToday").attr("src", weatherIncoUrl);
@@ -104,7 +104,7 @@ var getForecast = function (lat, lon) {
         $("#Date" + i).html(date);
         // display weather icon
         var weatherIncoUrl =
-          "https://openweathermap.org/img/wn/" +
+          "http://openweathermap.org/img/wn/" +
           response.daily[i].weather[0].icon +
           "@2x.png";
         $("#weatherIconDay" + i).attr("src", weatherIncoUrl);
